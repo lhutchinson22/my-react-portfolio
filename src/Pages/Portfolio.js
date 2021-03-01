@@ -1,6 +1,7 @@
 import React from "react";
 import "./../App.css";
 import useFetch from "../utils/UseFetch";
+import RepoList from "../RepoList/RepoList";
 // import RepoList from "../RepoList/RepoList";
 
 const Portfolio = () => {
@@ -16,7 +17,7 @@ const Portfolio = () => {
       <div className="container">
         {error && <div>{error}</div>}
         {isPending && <div>Loading...</div>}
-        {repos && repos.map((repo) => console.log(repo))}
+        {repos && <RepoList repos={repos} />}
       </div>
     </>
   );
