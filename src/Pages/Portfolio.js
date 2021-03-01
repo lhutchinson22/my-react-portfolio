@@ -2,7 +2,6 @@ import React from "react";
 import "./../App.css";
 import useFetch from "../utils/UseFetch";
 import RepoList from "../RepoList/RepoList";
-// import RepoList from "../RepoList/RepoList";
 
 const Portfolio = () => {
   const { error, isPending, data: repos } = useFetch(

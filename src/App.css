@@ -77,3 +77,17 @@
   position: relative;
   margin-top: 100px;
 }
+
+.card {
+  margin: 10px;
+}
+
+div.col-md-3 {
+  margin: 35px !important;
+}
+
+/* .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}  */
