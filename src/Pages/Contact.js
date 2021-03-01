@@ -1,9 +1,10 @@
 import React from "react";
+import "./../App.css";
 
 const Contact = () => {
   return (
-    <div>
-      <h1>Hi from contact</h1>
+    <div className="banner-image paraPort">
+      <h1 className="banner-header">Contact</h1>
     </div>
   );
 };
