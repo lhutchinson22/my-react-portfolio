@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Portfolio from "./Pages/Portfolio";
 import About from "./Pages/About";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -13,9 +14,9 @@ function App() {
       <div className="App">
         <Navbar />
         <div className="content">
-          <Jumbotron />
           <Switch>
             <Route exact path="/">
+              <Jumbotron />
               <Home />
             </Route>
             <Route path="/contact">
@@ -29,6 +30,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );
