@@ -1,0 +1,16 @@
+/* start nav bar */
+nav {
+  background-color: white !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #6c757d;
+}
+.navbar-dark .navbar-brand {
+  color: #6c757d;
+}
+a {
+  text-decoration: none !important;
+  margin: 10px !important;
+  color: #6c757d;
+}
+/* end nav bar */
