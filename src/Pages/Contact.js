@@ -6,13 +6,15 @@ import { useState } from "react";
 const Contact = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [checkSubmit, setCheckSubmit] = useState(false);
   // const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // history.go(-1);
-    console.log("your message has been sent!");
     // history.push("/");
+    console.log("your message has been sent!", title, body);
+    setCheckSubmit(true);
   };
 
   return (
@@ -26,7 +28,9 @@ const Contact = () => {
           type="text"
           required
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) =>
+            e.target.value ? setTitle(e.target.value) : "Enter Title"
+          }
         />
         <label>Message:</label>
         <textarea
@@ -34,15 +38,17 @@ const Contact = () => {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
-        <button>Message Me</button>
+        <button onClick={handleSubmit}>Message Me</button>
       </form>
-
-      {/* {handleSubmit ? (
-        <p>title: {title} was sent.</p>
+      {checkSubmit ? (
+        title ? (
+          <p>Message Sent!</p>
+        ) : (
+          <p>You need a title</p>
+        )
       ) : (
-        <p>please input field"</p>
-      )} */}
-      {/* {handleSubmit && <p>thank you for your message: "{body}"</p>} */}
+        <p></p>
+      )}
     </>
   );
 };

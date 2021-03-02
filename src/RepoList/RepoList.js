@@ -1,6 +1,10 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import "./../App";
+import reactGif from "./../Pages/imgs/reactAPP.gif";
+import fitnessGif from "./../Pages/imgs/fitnesstracker2.gif";
+import reicpeGif from "./../Pages/imgs/home_page_demo.gif";
+
+console.log(reactGif);
 
 const RepoList = ({ repos }) => {
   return (
@@ -9,13 +13,17 @@ const RepoList = ({ repos }) => {
       <div className="row pinned-repo">
         <div className="col-md-3">
           <div className="card" style={{ width: "18rem" }}>
-            <img src="..." className="card-img-top" alt="..." />
+            <img
+              src={reicpeGif}
+              className="pinned-card"
+              alt="employee-directory"
+            />
             <div className="card-body">
-              <h5 className="card-title">Reciple Pal</h5>
+              <h5 className="card-title">Recipe Pal</h5>
               <p className="card-text">text</p>
               <a
                 href="https://github.com/kaylamuraoka/Food_Application"
-                className="btn btn-primary"
+                className="btn btn-danger"
               >
                 github
               </a>
@@ -25,13 +33,13 @@ const RepoList = ({ repos }) => {
 
         <div className="col-md-3">
           <div className="card" style={{ width: "18rem" }}>
-            <img src="..." className="card-img-top" alt="..." />
+            <img src={fitnessGif} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Fitness Tracker</h5>
               <p className="card-text">text</p>
               <a
                 href="https://github.com/lhutchinson22/fitnessTracker"
-                className="btn btn-primary"
+                className="btn btn-danger"
               >
                 github
               </a>
@@ -41,13 +49,13 @@ const RepoList = ({ repos }) => {
 
         <div className="col-md-3">
           <div className="card" style={{ width: "18rem" }}>
-            <img src="..." className="card-img-top" alt="..." />
+            <img src={reactGif} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Employee Directory</h5>
               <p className="card-text">text</p>
               <a
                 href="https://github.com/lhutchinson22/EmployeeDirectoryReact"
-                className="btn btn-primary"
+                className="btn btn-danger"
               >
                 github
               </a>

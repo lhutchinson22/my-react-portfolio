@@ -3,9 +3,10 @@ import "./style.css";
 
 function Jumbotron() {
   return (
-    <div className="parallax text-center">
-      {/* <h1>Lauren Hutchinson</h1>
-      <h3>Full Stack Web Developer</h3> */}
+    <div className="parallax text-center" id="text-jumbo">
+      {/* <h1>Lauren Hutchinson</h1> */}
+      <h5>Web Developer</h5>
+      <h5> & Fitness Trainer</h5>
     </div>
   );
 }
