@@ -24,7 +24,7 @@ const Contact = () => {
       email,
     };
 
-    axios.post("api/sendMail", dataToSubmit);
+    axios.post("/api/sendMail", dataToSubmit);
   };
 
   return (
