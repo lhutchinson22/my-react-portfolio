@@ -16,7 +16,7 @@ const Contact = () => {
     e.preventDefault();
     // history.go(-1);
     // history.push("/");
-    console.log("your message has been sent!", name, body);
+    console.log("your message has been sent!", name, body, email);
     setCheckSubmit(true);
 
     const dataToSubmit = {

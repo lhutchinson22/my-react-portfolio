@@ -15,10 +15,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "backend": "nodemon server.js",
-    "frontend": "npm run front --prefix client",
-    "dev": "concurrently \"npm run backend\"  \"npm run start --prefix client\""
-  },
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run client\" \"npm run server\""  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lhutchinson22/my-react-portfolio.git"
