@@ -21,6 +21,7 @@ const Contact = () => {
 
     const dataToSubmit = {
       name,
+      body,
       email,
     };
 

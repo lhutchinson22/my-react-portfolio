@@ -1,5 +1,6 @@
 const mailer = require("nodemailer");
-const { Hello } = require("./hello_template");
+const { Hello } = require("./helloTemplate");
+const { Thanks } = require("./thanksTemplate");
 require("dotenv").config();
 
 const getEmailData = (to, name, template) => {
@@ -19,7 +20,7 @@ const getEmailData = (to, name, template) => {
         from: "Lauren Hutchinson <lbhutchinson022@gmail.com>",
         to,
         subject: `hello ${name}`,
-        html: THanks(),
+        html: Thanks(),
       };
       break;
 
