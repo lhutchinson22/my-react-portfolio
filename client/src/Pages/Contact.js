@@ -2,6 +2,7 @@ import React from "react";
 import "./../App.css";
 import { useState } from "react";
 // import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -17,6 +18,13 @@ const Contact = () => {
     // history.push("/");
     console.log("your message has been sent!", name, body);
     setCheckSubmit(true);
+
+    const dataToSubmit = {
+      name,
+      email,
+    };
+
+    axios.post("api/sendMail", dataToSubmit);
   };
 
   return (
