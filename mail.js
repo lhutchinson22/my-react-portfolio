@@ -33,8 +33,9 @@ const getEmailData = (to, name, template) => {
 
 const sendEmail = (to, name, type) => {
   const smtpTransport = mailer.createTransport({
-    service: "Gmail",
+    host: "smtp.gmail.com",
     auth: {
+      type: "login", // default
       user: "lbhutchinson022@gmail.com",
       pass: process.env.PASSWORD,
     },

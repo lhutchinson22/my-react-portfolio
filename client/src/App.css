@@ -22,6 +22,13 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .about-me-img {
+    max-width: 40%;
+    margin: auto;
+  }
+}
+
 .banner-image {
   background-image: url("./Components/Jumbotron/barrys3.png");
   height: 400px;
