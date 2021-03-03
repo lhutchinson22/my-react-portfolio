@@ -1,11 +1,24 @@
 .App {
   text-align: center;
 }
-
+/* h2{
+  color: #6c757d ;
+} */
 @media screen and (min-width: 400px) {
   .parallax {
     height: 100%;
     background-size: 90%;
+  }
+  .col-md-3 {
+    max-width: 50%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .col-md-3 {
+    max-width: 30%;
+    margin: auto;
   }
 }
 
@@ -79,15 +92,5 @@
 }
 
 .card {
-  margin: 10px;
-}
-
-div.col-md-3 {
   margin: 35px !important;
 }
-
-/* .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}  */

@@ -1,20 +1,19 @@
 import React from "react";
+import "./../App";
 // import { Link } from "react-router-dom";
 import reactGif from "./../Pages/imgs/reactAPP.gif";
 import fitnessGif from "./../Pages/imgs/fitnesstracker2.gif";
-import reicpeGif from "./../Pages/imgs/home_page_demo.gif";
-
-console.log(reactGif);
+import recipeGif from "./../Pages/imgs/home_page_demo.gif";
 
 const RepoList = ({ repos }) => {
   return (
-    <div className="container">
-      <h1>Pinned Repositories</h1>
+    <>
+      <h1 style={{ color: "#6c757d" }}>Pinned Repositories</h1>
       <div className="row pinned-repo">
         <div className="col-md-3">
-          <div className="card" style={{ width: "18rem" }}>
+          <div className="card" style={{ width: "15rem" }}>
             <img
-              src={reicpeGif}
+              src={recipeGif}
               className="pinned-card"
               alt="employee-directory"
             />
@@ -32,7 +31,7 @@ const RepoList = ({ repos }) => {
         </div>
 
         <div className="col-md-3">
-          <div className="card" style={{ width: "18rem" }}>
+          <div className="card" style={{ width: "15rem", color: "6c757d" }}>
             <img src={fitnessGif} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Fitness Tracker</h5>
@@ -48,7 +47,7 @@ const RepoList = ({ repos }) => {
         </div>
 
         <div className="col-md-3">
-          <div className="card" style={{ width: "18rem" }}>
+          <div className="card" style={{ width: "15rem" }}>
             <img src={reactGif} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Employee Directory</h5>
@@ -63,12 +62,12 @@ const RepoList = ({ repos }) => {
           </div>
         </div>
       </div>
-      <div className="blog-list">
-        <h2>Other Repositories</h2>
+      <div className="repo-list">
+        <h2 style={{ color: "#6c757d" }}>Other Repositories</h2>
         {repos &&
           repos.map((repo) => (
             <div className="repo-preview" key={repo.id}>
-              <div className="card clearfix" style={{ width: "18rem" }}>
+              <div className="card clearfix" style={{ width: "15rem" }}>
                 <img src="..." className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">{repo.name}</h5>
@@ -92,7 +91,7 @@ const RepoList = ({ repos }) => {
             </div>
           ))}
       </div>
-    </div>
+    </>
   );
 };
 
