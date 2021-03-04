@@ -48,7 +48,7 @@ const Contact = () => {
         <textarea
           required
           value={body}
-          placeholder="Whats up?"
+          placeholder="whats up?"
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
         <label>Your email:</label>
@@ -56,7 +56,7 @@ const Contact = () => {
           type="text"
           required
           value={email}
-          placeholder="Email Address"
+          placeholder="email address"
           onChange={(e) => setEmail(e.target.value)}
         />
         <button onClick={handleSubmit}>Message Me</button>

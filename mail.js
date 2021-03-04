@@ -1,7 +1,21 @@
 const mailer = require("nodemailer");
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 const { Hello } = require("./helloTemplate");
 const { Thanks } = require("./thanksTemplate");
 require("dotenv").config();
+
+const oauth2Client = new OAuth2(
+  "677716646288-l9cq339ahs0tdmujth2nll9jjdjahcci.apps.googleusercontent.com", // ClientID
+  "mP-cevlJ8uI9YtWD4SNpmPcc", // Client Secret
+  "https://developers.google.com/oauthplayground" // Redirect URL
+);
+
+oauth2Client.setCredentials({
+  refresh_token:
+    "1//04pdbMO19AyTwCgYIARAAGAQSNwF-L9IrbBcqJ2O1hMKeRhY1y3aK0JcbSJRblCEbnDSLIlS725nlNjYYuTejZb0IYqcQROek8wM",
+});
+const accessToken = oauth2Client.getAccessToken();
 
 const getEmailData = (to, name, template) => {
   let data = null;
@@ -33,11 +47,16 @@ const getEmailData = (to, name, template) => {
 
 const sendEmail = (to, name, type) => {
   const smtpTransport = mailer.createTransport({
-    host: "smtp.gmail.com",
+    service: "gmail",
     auth: {
-      type: "login", // default
+      type: "OAuth2",
       user: "lbhutchinson022@gmail.com",
-      pass: process.env.PASSWORD,
+      clientId:
+        "677716646288-l9cq339ahs0tdmujth2nll9jjdjahcci.apps.googleusercontent.com",
+      clientSecret: "mP-cevlJ8uI9YtWD4SNpmPcc",
+      refreshToken:
+        "1//04pdbMO19AyTwCgYIARAAGAQSNwF-L9IrbBcqJ2O1hMKeRhY1y3aK0JcbSJRblCEbnDSLIlS725nlNjYYuTejZb0IYqcQROek8wM",
+      accessToken: accessToken,
     },
   });
 
