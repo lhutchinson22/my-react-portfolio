@@ -62,28 +62,30 @@ const RepoList = ({ repos }) => {
           </div>
         </div>
       </div>
-      <div className="repo-list">
+      <>
         <h2 style={{ color: "#6c757d" }}>Other Repositories</h2>
-        {repos &&
-          repos.map((repo, index) => (
-            <div key={index} className="card" style={{ width: "15rem" }}>
-              <div className="card-body">
-                <h5 className="card-title">{repo.full_name}</h5>
-                <p className="card-text">
-                  {repo.html_url}
-                  <br></br>
-                  <strong>created</strong>: {repo.created_at}
-                </p>
-                <a
-                  href="https://github.com/lhutchinson22"
-                  className="btn btn-primary"
-                >
-                  github
-                </a>
+        <div className="repo-list" style={{ margin: "10px" }}>
+          {repos &&
+            repos.map((repo, index) => (
+              <div key={index} className="card" style={{ width: "15rem" }}>
+                <div className="card-body">
+                  <h5 className="card-title">{repo.full_name}</h5>
+                  <p className="card-text">
+                    {repo.html_url}
+                    <br></br>
+                    <strong>created</strong>: {repo.created_at}
+                  </p>
+                  <a
+                    href="https://github.com/lhutchinson22"
+                    className="btn btn-primary"
+                  >
+                    github
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-      </div>
+            ))}
+        </div>
+      </>
     </>
   );
 };

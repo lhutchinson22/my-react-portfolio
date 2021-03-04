@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css";
+import resume from "./CompetitiveResumeUpdated.pdf";
 
 const Footer = () => {
   return (
     <div className="card-footer ">
       © 2021 Lauren Hutchinson
-      <a href="./Assets/Images/ResumeCodingPDF.zip" download>
+      <a href={resume} download>
         <p id="pdfDownload">Click me to download resume</p>
       </a>
       <a href="https://www.instagram.com/hutchdaddyy/">
