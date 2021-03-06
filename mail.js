@@ -2,7 +2,7 @@ const mailer = require("nodemailer");
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 const { Hello } = require("./helloTemplate");
-const { Thanks } = require("./thanksTemplate");
+// const { Thanks } = require("./thanksTemplate");
 require("dotenv").config();
 
 const oauth2Client = new OAuth2(
@@ -17,30 +17,16 @@ oauth2Client.setCredentials({
 });
 const accessToken = oauth2Client.getAccessToken();
 
-const getEmailData = (to, name, template) => {
-  let data = null;
+const getEmailData = (to, name) => {
+  let data = {
+    from: "Lauren Hutchinson <lbhutchinson022@gmail.com>",
+    to: to,
+    subject: `Hello ${name} !`,
+    html: Hello(),
+  };
 
-  switch (template) {
-    case "hello":
-      data = {
-        from: "Lauren Hutchinson <lbhutchinson022@gmail.com>",
-        to,
-        subject: `hello ${name}`,
-        html: Hello(),
-      };
-      break;
-    case "thanks":
-      data = {
-        from: "Lauren Hutchinson <lbhutchinson022@gmail.com>",
-        to,
-        subject: `hello ${name}`,
-        html: Thanks(),
-      };
-      break;
-
-    default:
-      break;
-  }
+  console.log("console logging data: ", data);
+  console.log("console logging 'to': ", to);
 
   return data;
 };

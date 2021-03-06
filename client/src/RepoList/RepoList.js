@@ -66,7 +66,10 @@ const RepoList = ({ repos }) => {
         <h2 style={{ color: "#6c757d", textAlign: "center" }}>
           Other Repositories
         </h2>
-        <div className="row" style={{}}>
+        <div
+          className="row"
+          style={{ margin: "auto", width: "90%", padding: "10px" }}
+        >
           {repos &&
             repos.map((repo, index) => (
               <div key={index} className="card" style={{ width: "15rem" }}>
