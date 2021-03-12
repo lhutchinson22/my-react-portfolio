@@ -22,10 +22,18 @@ const Navbar = () => {
         id="navbarSupportedContent"
       >
         <ul className="nav navbar-nav navbar-right justify-content-end">
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/portfolio">Portfolio</Link>
-          <Link to="/about">About</Link>
+          <li className="nav-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about">About</Link>
+          </li>
         </ul>
       </div>
     </nav>
@@ -33,12 +41,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-<nav className="navbar">
-  <h1>Hutch</h1>
-  <div className="links">
-    <Link to="/">Home</Link>
-    <Link to="/contact">Contact</Link>
-    <Link to="/portfolio">Portfolio</Link>
-  </div>
-</nav>;

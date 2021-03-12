@@ -1,7 +1,7 @@
 const mail = require("./mail");
 
 const Hello = (nm, bd, to) => {
-  return `<h4>${nm}</h4><h6>${bd}</h6><h6>${to}</h6>`;
+  return `<h2>${nm}</h2><h2>${bd}</h2><h2>${to}</h2>`;
 };
 
 module.exports = Hello;
