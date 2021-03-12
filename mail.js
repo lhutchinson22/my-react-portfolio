@@ -2,7 +2,6 @@ const mailer = require("nodemailer");
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 const { Hello } = require("./helloTemplate");
-// const { Thanks } = require("./thanksTemplate");
 require("dotenv").config();
 
 const oauth2Client = new OAuth2(
@@ -13,7 +12,7 @@ const oauth2Client = new OAuth2(
 
 oauth2Client.setCredentials({
   refresh_token:
-    "1//04pdbMO19AyTwCgYIARAAGAQSNwF-L9IrbBcqJ2O1hMKeRhY1y3aK0JcbSJRblCEbnDSLIlS725nlNjYYuTejZb0IYqcQROek8wM",
+    "1//04-Ww9EwdbQVoCgYIARAAGAQSNwF-L9IrCvxsuv9b1pwnAYyY_RokAFz-6bv9L0N-w12Kp74xMuOKBIWk6PmNj4B-zQC--FHSCuU",
 });
 const accessToken = oauth2Client.getAccessToken();
 
@@ -21,7 +20,7 @@ const getEmailData = (to, name) => {
   let data = {
     from: "Lauren Hutchinson <lbhutchinson022@gmail.com>",
     to: to,
-    subject: `Hello ${name} !`,
+    subject: `Hey ${name}, lets connect.`,
     html: Hello(),
   };
 
@@ -41,7 +40,7 @@ const sendEmail = (to, name, type) => {
         "677716646288-l9cq339ahs0tdmujth2nll9jjdjahcci.apps.googleusercontent.com",
       clientSecret: "mP-cevlJ8uI9YtWD4SNpmPcc",
       refreshToken:
-        "1//04pdbMO19AyTwCgYIARAAGAQSNwF-L9IrbBcqJ2O1hMKeRhY1y3aK0JcbSJRblCEbnDSLIlS725nlNjYYuTejZb0IYqcQROek8wM",
+        "1//04-Ww9EwdbQVoCgYIARAAGAQSNwF-L9IrCvxsuv9b1pwnAYyY_RokAFz-6bv9L0N-w12Kp74xMuOKBIWk6PmNj4B-zQC--FHSCuU",
       accessToken: accessToken,
     },
   });

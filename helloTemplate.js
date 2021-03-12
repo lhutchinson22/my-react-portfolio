@@ -1,3 +1,5 @@
+const mail = require("./mail");
+
 const Hello = (data) => {
   return `
     <!DOCTYPE html>
@@ -10,7 +12,7 @@ const Hello = (data) => {
            <body style="margin: 0; padding: 0;">
               <br />
               <br />
-              <div>Hey Lauren! <br><br> ${data} </div>
+              <div>${data} </div>
               <br />
               <br />
            </body>
