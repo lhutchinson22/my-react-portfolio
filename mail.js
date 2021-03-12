@@ -21,7 +21,7 @@ const getEmailData = (to, name) => {
     from: "Lauren Hutchinson <lbhutchinson022@gmail.com>",
     to: to,
     subject: `Hey ${name}, lets connect.`,
-    html: Hello(),
+    html: Hello(name),
   };
 
   console.log("console logging data: ", data);
