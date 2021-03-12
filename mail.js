@@ -1,7 +1,7 @@
 const mailer = require("nodemailer");
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
-const { Hello } = require("./helloTemplate");
+const Hello = require("./helloTemplate");
 require("dotenv").config();
 
 const oauth2Client = new OAuth2(

@@ -1,24 +1,7 @@
 const mail = require("./mail");
 
 const Hello = (data) => {
-  return `
-    <!DOCTYPE html>
-   <html style="margin: 0; padding: 0;">
-   
-       <head>
-           <title>Hello</title>
-       </head>
-   
-           <body style="margin: 0; padding: 0;">
-              <br />
-              <br />
-              <div>${data} </div>
-              <br />
-              <br />
-           </body>
-   
-     </html>
-    `;
+  `<h1>${data} </h1>`;
 };
 
-module.exports = { Hello };
+module.exports = Hello;
