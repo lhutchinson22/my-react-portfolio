@@ -16,12 +16,13 @@ oauth2Client.setCredentials({
 });
 const accessToken = oauth2Client.getAccessToken();
 
-const getEmailData = (to, name) => {
+const getEmailData = (to, name, body) => {
+  console.log();
   let data = {
     from: "Lauren Hutchinson <lbhutchinson022@gmail.com>",
-    to: to,
+    to: "lbhutchinson022@gmail.com",
     subject: `Hey ${name}, lets connect.`,
-    html: Hello(name),
+    html: Hello(name, body, to),
   };
 
   console.log("console logging data: ", data);
