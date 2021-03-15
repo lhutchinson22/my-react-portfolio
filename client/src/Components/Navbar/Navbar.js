@@ -7,7 +7,7 @@ const Navbar = () => {
       <span className="navbar-brand mb-1 h1">Lauren Hutchinson</span>
       <button
         className="navbar-toggler"
-        style={{ backgroundColor: "black", width: "60px" }}
+        style={{ backgroundColor: "black" }}
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -23,16 +23,24 @@ const Navbar = () => {
       >
         <ul className="nav navbar-nav navbar-right justify-content-end">
           <li className="nav-item">
-            <Link to="/">Home</Link>
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact">Contact</Link>
+            <Link className="nav-link" to="/contact">
+              Contact
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/portfolio">Portfolio</Link>
+            <Link className="nav-link" to="/portfolio">
+              Portfolio
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about">About</Link>
+            <Link className="nav-link" to="/about">
+              About
+            </Link>
           </li>
         </ul>
       </div>
